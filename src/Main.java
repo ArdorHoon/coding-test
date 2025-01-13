@@ -12,19 +12,33 @@ import java.util.StringTokenizer;
  */
 public class Main {
     public static void main(String[] args) {
-            Double number = 600851475143D;
+        int max = 20;
+        int answer = 1;
 
-            System.out.println( Math.sqrt(number));
+        for(int i = 2 ; i <= max ; i++){
+            if(checkIsPrimeNumber(i)){
 
-            for(Double i=2D ; i< Math.sqrt(number); i++){
-                if(number%i ==0){
-                    number = number/i;
+                int k = i;
+                while(true){
+                    k = k *i;
+                    if(k> max){
+                        break;
+                    }
                 }
+                answer = answer * (k/i);
             }
+        }
 
-            //소인수 중 가장 큰 수
-            System.out.println(number);
+        System.out.println(answer);
 
+    }
+
+    public static boolean checkIsPrimeNumber(int num){
+        for(int i = 2 ; i*i <= num ; i++){
+            if(num %i ==0)
+                return false;
+        }
+        return true;
     }
 }
 

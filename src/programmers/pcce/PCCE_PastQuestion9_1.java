@@ -1,11 +1,11 @@
-package programmers.pccp;
+package programmers.pcce;
 
 /*
     문제 : [PCCE 기출문제] 9번 / 지폐 접기
     언어 : Java
     난이도 : Level 1
  */
-public class PCCP_PastQuestion9 {
+public class PCCE_PastQuestion9_1 {
 
     public static void main(String[] args) {
         Solution solution = new Solution();

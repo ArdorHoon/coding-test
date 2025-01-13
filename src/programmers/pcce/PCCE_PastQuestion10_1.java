@@ -1,11 +1,11 @@
-package programmers.pccp;
+package programmers.pcce;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PCCP_PastQuestion10 {
+public class PCCE_PastQuestion10_1 {
 
     public static void main(String[] args) {
 
@@ -27,6 +27,8 @@ public class PCCP_PastQuestion10 {
     public static class Solution {
         public int solution(int[] mats, String[][] park) {
             int answer = -1;
+
+            // 내림차순 정렬하기
             List<Integer> reverseOrderMats = Arrays.stream(mats).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 
             for (Integer reverseOrderMat : reverseOrderMats) {
@@ -45,10 +47,11 @@ public class PCCP_PastQuestion10 {
 
         for (int i = 0; i < park.length; i++) {
             for (int j = 0; j < park[i].length; j++) {
-
+                //펼수 있는지 없는지 확인
                 boolean check = true;
-
+                // -1 일 때 기준으로 돗자리 펼 수 있는지 확인
                 if (park[i][j].equals("-1") && i + num <= park.length && j + num <= park[i].length) {
+                    //한 변 크기 만큼 돗자리 필 수 있는지 체크
                     for (int m = i; m < i + num; m++) {
                         for (int n = j; n < j + num; n++) {
                             if (!park[m][n].equals("-1")) {

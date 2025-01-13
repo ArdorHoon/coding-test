@@ -5,6 +5,13 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+/*
+    문제 : [PCCE 기출문제] 10번 / 공원
+    언어 : Java
+    난이도 : Level 1
+ */
+
 public class PCCE_PastQuestion10_1 {
 
     public static void main(String[] args) {

@@ -12,19 +12,36 @@ import java.util.StringTokenizer;
  */
 public class Main {
     public static void main(String[] args) {
-        int max = 100;
+        int answer = 0;
+        int number = 2;
 
-        double a = max*(max +1)*(2*max+1)/6; //제곱의 합
-        double sum = max*(max+1)/2;
-        double b = Math.pow(sum ,2);//합의 제곱
+        while (true){
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(b-a);
+            if(isPrimeNumber(number)) {
+                answer++;
+            }
+
+            if(answer == 10001){
+                System.out.println(number);
+                break;
+            }
+
+            number++;
+
+        }
+
 
     }
 
+    public static boolean isPrimeNumber(int num){
 
+        for(int i = 2 ;  i*i <= num ; i++){
+            if(num % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 //    아래 input output

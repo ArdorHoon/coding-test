@@ -62,7 +62,7 @@ public class PCCE_PastQuestion10_2 {
             return sorting(sort_by, temp);
 
         }
-        
+
         public static ArrayList<int[]>  sorting(String sort_by, ArrayList<int[]> data){
             switch (sort_by){
                 case "code":

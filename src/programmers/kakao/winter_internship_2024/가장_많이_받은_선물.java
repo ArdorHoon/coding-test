@@ -4,13 +4,7 @@ import java.util.Arrays;
 
 public class 가장_많이_받은_선물 {
 
-
-    /*
-    1. 선물을 서로 주고 받았나?
-    2. 선물을 서로 주고 받지 않거나 같다?
-        1. 선물 지수가 더 큰 사람이 작은 사람에게 하나 더 받는다.
-        2. 선물 지수도 같다면 서로 주고 받지 않음
-     */
+    // Level 1
     public static void main(String[] args) {
 
         String[] friends = new String[]{"muzi", "ryan", "frodo", "neo"};
